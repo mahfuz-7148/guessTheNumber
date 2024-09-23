@@ -31,6 +31,23 @@ function guessingNumber(difficulty) {
             
     }
 
+    while(attempts < maxAttempts) {
+        let guess = parseInt(prompt(`Guess a number between 1 to ${range} . So you have ${maxAttempts - attempts} attempts left`));
+        attempts++;
+        if(guess === randomNumber){
+
+            console.log('Congratulationss!!');
+            break;
+        }
+        else if (guess < randomNumber){
+            console.log('Too low, please try again');
+        }
+        else {
+            console.log('Too high, please try again');
+        }
+        console.log(guess);
+    }
+
 }
 
 
